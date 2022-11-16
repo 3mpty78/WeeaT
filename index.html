@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>WeeaT</title>
+</head>
+<body>
+    <h1 id="title">WeeaT</h1>
+
+    <!-- Side Navigation -->
+    
+    <div class="icons">
+        <div class="menuIcon1"></div>
+        <div class="menuIcon2"></div>
+    </div>
+
+    <div class="sidebar">
+        <header>Menu</header>
+        <ul>
+            <li><a href="#">Section 1</a></li>            
+            <li><a href="#">Section 2</a></li>            
+            <li><a href="#">Section 3</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Feedback</a></li>
+        </ul>
+    </div>
+    
+    <!-- Log-in -->
+    
+    <div class="login">
+        <img class="loginIcon" src="./assets/Icons/profile.png" alt="login icon">
+    </div>
+    <div class="loginContainer">
+        <h2>Login</h2>
+        <form method="post" >
+            <div class="txtField">
+                <input type="text" required>
+                <span></span>
+                <label>Username</label>
+            </div>
+            <div class="txtField">
+                <input type="password" required>
+                <span></span>
+                <label>Password</label>
+            </div>
+            <div class="pass">Forgot Password ?</div>
+            <input type="submit" value="Login">
+            <div class="signupLink">
+                <a href="#">Sign Up !</a>
+            </div>
+        </form>
+    </div>
+    
+    <div class="content">
+    
+    <!-- Main banner -->
+        
+        <div class="container">
+            <div class="carousel">
+                <div class="slider">
+                    <section class="firstSection"></section>
+                    <section class="secondSection"></section>
+                    <section class="thirdSection"></section>
+                    <section class="fourthSection"></section>
+                </div>
+                <div class="controls">
+                    <span class="arrow left"><img src="./assets/Icons/keyboard_arrow_left.png" alt="Previous"></span>
+                    <span class="arrow right"><img src="./assets/Icons/keyboard_arrow_right.png" alt="Next"></span>
+                    <ul>
+                        <li class="selected"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <!-- Add content behind banner images (meal description) -->
+
+        <div class="first-section">
+            <h2>First section</h2>
+            <div class="first-bg">
+                <img src="./assets/bottle.jpg" alt="on sait pas nique ta race">
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
