@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+*{
+    font-family: 'Comfortaa', cursive;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+body{
+    background: #f4f3ee;
+}
+
+/* Header */
+
+h1{
+    text-align: center;
+    margin-top: 1.3rem;
+    font-size: calc(7vmin + 30px);
+    margin: 80px 0 80px;
+    color: #333;
+    text-shadow: 4px 4px 4px #8a817c86;
+    transition: 0.4s;
+}
+.icons{
+    width: fit-content;
+    position: fixed;
+    top: calc(1.5rem + 20px);
+    left: calc(1.5rem + 20px);
+    z-index: 25;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+.menuIcon1, .menuIcon2{
+    border-top: 2px solid #8a817c;
+    width: 20px;
+    padding: 0.35rem;
+    transition: all 0.4s ease-in-out;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    margin-left: -500px;
+    transition: all 0.4s ease-in-out;
+    z-index: 20;
+    width: calc(10vmin + 300px);
+    height: 100%;
+    background: #8a817c;
+    box-shadow: 8px 0px 50px rgba(51, 51, 51, 0.582);
+}
+.hide{
+    margin-left: 0px;
+}
+.brighter1{
+    border-top: 2px solid #f4f3ee;
+    transform: rotateZ(315deg);
+}
+.brighter2{
+    border-top: 2px solid #f4f3ee;
+    transform: rotateZ(225deg);
+}
+.topAndLeft{
+    top: 1.5rem;
+    left: 30px;
+}
+.sidebar header{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: #bcb8b1;
+}
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid #f4f3ee2f;
+    text-decoration: none;
+    transition: 0.4s;
+}
+.sidebar ul li{
+    list-style: none;
+    text-decoration: none;
+}
+ul li:hover a{
+    padding-left: 50px;
+    text-shadow: 4px 4px 4px #bcb8b1;
+}
+
+/* Diaporama */
+
+.container{
+    width: 85%;
+    margin: 10px auto;
+    transition: all 0.4s ease-in-out;
+}
+.content{
+    transition: 0.4s;
+}
+.blurry{
+    filter: blur(5px);
+}
+.carousel{
+    border: 2px solid #ccc;
+    height: calc(1vh + 400px);
+    overflow: hidden;
+    position: relative;
+}
+.slider{
+    height: 100%;
+    display: flex;
+    width: 400%;
+    transition: all 0.6s;
+}
+.slider section{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.firstSection{
+    background: url(./assets/pexels-jer-chung-2116094.jpg) no-repeat center/cover;
+}
+.secondSection{
+    background: url(./assets/pexels-ella-olsson-1640777.jpg) no-repeat center/cover;
+}
+.thirdSection{
+    background: url(./assets/pexels-jane-doan-793759.jpg) no-repeat center/cover;
+}
+.fourthSection{
+    background: url(./assets/pexels-lumn-1410235.jpg) no-repeat center/cover;
+}
+.controls .arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.arrow.left{
+    left: 0px;
+    height: calc(1vh + 400px);
+    width: 50px;
+    transition: 0.3s ease-in-out;
+}
+.arrow.right{
+    right: 0px;
+    height: calc(1vh + 400px);
+    width: 50px;
+    transition: 0.3s ease-in-out;
+}
+.arrow.left:hover,
+.arrow.right:hover {
+    background-color: #f4f3ee65;
+}
+.controls ul{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f3ee65;
+    border-radius: 25px;
+}
+.controls ul li{
+    width: 8px;
+    height: 8px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    margin: 10px;
+    background: transparent;
+    cursor: pointer;
+}
+.controls ul li.selected{
+    background: #333;
+}
+
+/* Login section */
+
+.login {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    width: 100vw;
+    overflow-x: hidden;
+    top: 0;
+}
+.login img{
+    width: 40px;
+    padding-right: calc(1.5rem + 20px);
+    margin-top: calc(1.5rem + 20px);
+    position: fixed;
+    cursor: pointer;
+}
+.loginContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(30vmax + 20vmin);
+    background-color: #f4f3ee;
+    border-radius: 10px;
+    transition: 0.4s;
+    filter: opacity(0);
+    border: 2px solid #333;
+}
+.appear {
+    filter: opacity(1);
+    z-index: 2000;
+    transition: 0.4s;
+}
+.loginContainer h2 {
+    text-align: center;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #8a817c;
+    color: #333;
+}
+.loginContainer form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+form .txtField{
+    position: relative;
+    border-bottom: 2px solid #8a817c;
+    margin: 30px 0;
+}
+.txtField input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: calc(1vmin + 8px);
+    border: none;
+    background: none;
+    outline: none;
+}
+.txtField label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #bcb8b1;
+    transform: translateY(-50%);
+    font-size: calc(1vmin + 8px);
+    pointer-events: none;
+    transition: 0.4s;
+}
+.txtField span::before{
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #333;
+    transition: 0.4s;
+}
+.txtField input:focus ~ label,
+.txtField input:valid ~ label {
+    top: -5px;
+    color: #333;
+}
+.txtField input:focus ~ span::before,
+.txtField input:valid ~ span::before {
+    width: 100%;
+}
+.pass{
+    margin: -5px 0 20px 5px;
+    color: #bcb8b1;
+    cursor: pointer;
+    font-size: calc(1vmin + 8px)
+}
+.pass:hover{
+    text-decoration: underline;
+}
+input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background-color: #333;
+    border-radius: 25px;
+    font-size: calc(1vmin + 12px);
+    color: #bcb8b1;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+input[type="submit"]:hover {
+    background: #bcb8b1;
+    transition: 0.4s;
+    color: #333;
+}
+.signupLink {
+    margin: 30px 0;
+    text-align: center;
+    font-size: calc(1vmin + 8px);
+    color: #333;
+}
+.signupLink a {
+    color: #333;
+    text-decoration: none;
+}
+.signupLink a:hover {
+    text-decoration: underline;
+}
+
+/* Design first section */
+
+.first-section, .first-bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.first-bg img{
+    width: 85%;
+}
