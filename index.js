@@ -12,6 +12,7 @@ const icon2 = document.querySelector(".menuIcon2");
 const title = document.getElementById("title");
 const login = document.querySelector(".loginIcon");
 const loginContainer = document.querySelector(".loginContainer");
+const firstSection = document.querySelector(".first-section p");
 
 // Variables init
 
@@ -68,5 +69,23 @@ document.addEventListener("click", (a) => {
     icon2.classList.remove("brighter2");
     menu.classList.remove("topAndLeft");
     loginContainer.classList.remove("appear");
+  }
+});
+
+document.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    login.style.filter = "opacity(0)";
+    login.style.zIndex = "-600";
+  } else {
+    login.style.filter = "opacity(1)";
+    login.style.zIndex = "21";
+  }
+});
+
+document.addEventListener("scroll", () => {
+  if (window.scrollY > 5 && loginContainer.classList.contains("appear")) {
+    loginContainer.classList.remove("appear");
+    container.classList.remove("blurry");
+    title.classList.remove("blurry");
   }
 });

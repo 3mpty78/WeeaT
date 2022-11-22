@@ -14,12 +14,16 @@ body{
 
 h1{
     text-align: center;
-    margin-top: 1.3rem;
+    z-index: 20;
+    position: sticky;
+    top: 0;
     font-size: calc(7vmin + 30px);
-    margin: 80px 0 80px;
+    margin: 0 auto 50px;
     color: #333;
     text-shadow: 4px 4px 4px #8a817c86;
     transition: 0.4s;
+    padding-top: 1rem;
+    background: #f4f3ee;
 }
 .icons{
     width: fit-content;
@@ -93,10 +97,43 @@ ul li:hover a{
 
 /* Diaporama */
 
+/* Banner content / descriptions */
+
+.meal1 {
+    position: absolute;
+    width: 25%;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    background: #f4f3eebb;
+    height: 100%;
+    transition: 0.4s;
+    margin-top: 500px;
+}
+.meal1 p {
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 50px;
+    border: 2px solid green;
+}
+.meal1 h3 {
+    border: 2px solid blue;
+    margin-top: 200px;
+
+}
+
 .container{
     width: 85%;
-    margin: 10px auto;
+    margin: 0 auto;
     transition: all 0.4s ease-in-out;
+}
+.slider:hover .meal1 {
+    margin-top: 0;
+}
+.slider:hover .firstSection {
+    filter: blur(5px);
 }
 .content{
     transition: 0.4s;
@@ -105,7 +142,7 @@ ul li:hover a{
     filter: blur(5px);
 }
 .carousel{
-    border: 2px solid #ccc;
+    border-radius: 10px;
     height: calc(1vh + 400px);
     overflow: hidden;
     position: relative;
@@ -123,6 +160,7 @@ ul li:hover a{
     align-items: center;
 }
 .firstSection{
+    transition: 0.4s;
     background: url(./assets/pexels-jer-chung-2116094.jpg) no-repeat center/cover;
 }
 .secondSection{
@@ -197,9 +235,14 @@ ul li:hover a{
 .login img{
     width: 40px;
     padding-right: calc(1.5rem + 20px);
-    margin-top: calc(1.5rem + 20px);
+    margin-top: calc(1rem + 20px);
     position: fixed;
     cursor: pointer;
+    filter: opacity(1);
+    z-index: 21;
+}
+.loginAppear {
+    filter: opacity(0);
 }
 .loginContainer{
     position: absolute;
@@ -311,6 +354,7 @@ input[type="submit"]:hover {
     text-decoration: underline;
 }
 
+
 /* Design first section */
 
 .first-section, .first-bg{
@@ -319,7 +363,9 @@ input[type="submit"]:hover {
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
+    transition: 0.4s;
 }
 .first-bg img{
     width: 85%;
 }
+
